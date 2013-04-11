@@ -10,19 +10,36 @@
     <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        html,
+        body { height: 100% }
+        #wrap {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            margin: 0 auto -60px;
         }
-        .footer {
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 70px;
-            border-top: 1px solid #e5e5e5;
-            background-color: #f5f5f5;
+        #wrap > .container { padding-top: 60px }
+        .container .credit { margin: 20px 0 }
+        #push, #footer { height: 60px }
+        #footer { background-color: #f5f5f5 }
+
+        @media (min-width: 768px) and (max-width: 979px) {
+            #wrap > .container { padding-top: 0 }
         }
-        #myCarousel .item img {
-            width: 870px;
-            height: 300px;
+        @media (max-width: 767px) {
+            #wrap > .container {
+                padding-top: 0;
+                padding-bottom: 20px;
+            }
+            #footer {
+                margin-left: -20px;
+                margin-right: -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        .affix {
+            top: 60px;
         }
     </style>
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -62,7 +79,7 @@
         </div>
     </div>
 </div>
-
+<div id="wrap">
 <div class="container">
 
     <div class="row">
@@ -74,18 +91,13 @@
             </div>
             <br>
             <div class="row">
-                <div class="span3">
+                <div class="span3" data-spy="affix" data-offset-top="190">
                     <ul class="nav nav-tabs nav-stacked">
                         <li><a href="#cardapio">Cardápio</a></li>
                         <li><a href="#novvidades">Novidades</a></li>
                         <li><a href="#enderecos">Endereços</a></li>
                         <li><a href="#institucional">Institucional</a></li>
                     </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="span3">
-                    <img src="http://placehold.it/270x100" alt="logo">
                 </div>
             </div>
         </div>
@@ -136,19 +148,56 @@
                     <img src="http://placehold.it/270x170" alt="logo">
                 </div>
             </div>
+            <div class="row">
+                <div class="span6">
+                    <h2>Informativo</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ligula augue, venenatis eu fermentum a, mattis ac nisl. Nulla pulvinar dolor sit amet massa hendrerit nec consectetur leo luctus. Mauris leo odio, gravida id placerat ac, sagittis nec dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris tellus mauris, laoreet ut auctor id, varius et magna. Morbi euismod, nibh ac dignissim malesuada, diam urna elementum lorem, a mattis odio libero vel dui.</p>
+                </div>
+                <div class="span3">
+                    <img src="http://placehold.it/270x170" alt="logo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6">
+                    <h2>Informativo</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ligula augue, venenatis eu fermentum a, mattis ac nisl. Nulla pulvinar dolor sit amet massa hendrerit nec consectetur leo luctus. Mauris leo odio, gravida id placerat ac, sagittis nec dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris tellus mauris, laoreet ut auctor id, varius et magna. Morbi euismod, nibh ac dignissim malesuada, diam urna elementum lorem, a mattis odio libero vel dui.</p>
+                </div>
+                <div class="span3">
+                    <img src="http://placehold.it/270x170" alt="logo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6">
+                    <h2>Informativo</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ligula augue, venenatis eu fermentum a, mattis ac nisl. Nulla pulvinar dolor sit amet massa hendrerit nec consectetur leo luctus. Mauris leo odio, gravida id placerat ac, sagittis nec dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris tellus mauris, laoreet ut auctor id, varius et magna. Morbi euismod, nibh ac dignissim malesuada, diam urna elementum lorem, a mattis odio libero vel dui.</p>
+                </div>
+                <div class="span3">
+                    <img src="http://placehold.it/270x170" alt="logo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="span6">
+                    <h2>Informativo</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ligula augue, venenatis eu fermentum a, mattis ac nisl. Nulla pulvinar dolor sit amet massa hendrerit nec consectetur leo luctus. Mauris leo odio, gravida id placerat ac, sagittis nec dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris tellus mauris, laoreet ut auctor id, varius et magna. Morbi euismod, nibh ac dignissim malesuada, diam urna elementum lorem, a mattis odio libero vel dui.</p>
+                </div>
+                <div class="span3">
+                    <img src="http://placehold.it/270x170" alt="logo">
+                </div>
+            </div>
         </div>
     </div>
 </div> <!-- /container -->
-<footer class="footer">
+</div> <!-- /wrap -->
+<div id="push"></div>
+<div id="footer">
     <div class="container">
-        <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
     </div>
-</footer>
+</div>
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
-
 </body>
 </html>
