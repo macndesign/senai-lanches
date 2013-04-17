@@ -10,24 +10,17 @@
     <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
-        html,
-        body { height: 100% }
-        #wrap {
-            min-height: 100%;
-            height: auto !important;
-            height: 100%;
-            margin: 0 auto -60px;
-        }
-        #wrap > .container { padding-top: 60px }
+        body { position: relative; padding-top: 60px }
         .container .credit { margin: 20px 0 }
-        #push, #footer { height: 60px }
-        #footer { background-color: #f5f5f5 }
-
+        #footer {
+            height: 270px;
+            background-color: #f5f5f5
+        }
         @media (min-width: 768px) and (max-width: 979px) {
-            #wrap > .container { padding-top: 0 }
+            .container { padding-top: 0 }
         }
         @media (max-width: 767px) {
-            #wrap > .container {
+            .container {
                 padding-top: 0;
                 padding-bottom: 20px;
             }
@@ -40,6 +33,11 @@
         }
         .affix {
             top: 60px;
+        }
+        .affix-bottom {
+            position: absolute;
+            top: auto;
+            bottom: 270px;
         }
     </style>
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -79,7 +77,6 @@
         </div>
     </div>
 </div>
-<div id="wrap">
 <div class="container">
 
     <div class="row">
@@ -91,7 +88,7 @@
             </div>
             <br>
             <div class="row">
-                <div class="span3" data-spy="affix" data-offset-top="190">
+                <div class="span3 sidenav" data-spy="affix" data-offset-top="160" data-offset-bottom="270">
                     <ul class="nav nav-tabs nav-stacked">
                         <li><a href="#cardapio">Cardápio</a></li>
                         <li><a href="#novvidades">Novidades</a></li>
@@ -187,8 +184,6 @@
         </div>
     </div>
 </div> <!-- /container -->
-</div> <!-- /wrap -->
-<div id="push"></div>
 <div id="footer">
     <div class="container">
         <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
